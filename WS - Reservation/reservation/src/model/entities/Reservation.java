@@ -19,7 +19,7 @@ public class Reservation {
 
 	}
 
-	public Reservation(Integer roomNumber, Date checkin, Date checkout) throws DomainException {
+	public Reservation(Integer roomNumber, Date checkin, Date checkout) {
 
 		if (!checkout.after(checkin)) {
 
@@ -61,7 +61,7 @@ public class Reservation {
 
 	// ------------------------------------------------------------------------ >
 
-	public void updateDates(Date checkin, Date checkout) throws DomainException {
+	public void updateDates(Date checkin, Date checkout) {
 
 		Date now = new Date();
 

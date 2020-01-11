@@ -1,27 +1,13 @@
 package model.exceptions;
 
-public class DomainException extends Exception {
+public class DomainException extends RuntimeException {
+	// Usualmente a exceção herda da super classe "Exception" ou RuntimeException.
+	// Exception o compilador obriga a ser tratada, RuntimoException não.
+	private static final long serialVersionUID = 1L; // Serial, pois a mesma é uma classe serializavel.
 
-	private static final long serialVersionUID = 1L;
-
-	public DomainException() {
-		super();
-	}
-
-	public DomainException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-		super(message, cause, enableSuppression, writableStackTrace);
-	}
-
-	public DomainException(String message, Throwable cause) {
-		super(message, cause);
-	}
-
+	// Construtor
 	public DomainException(String message) {
 		super(message);
-	}
-
-	public DomainException(Throwable cause) {
-		super(cause);
 	}
 
 }
